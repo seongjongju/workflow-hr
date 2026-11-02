@@ -1,0 +1,36 @@
+#login {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: clamp(30px,8.3333vw,50px);
+    background-color: #fff;
+}
+
+.login__logo {
+    font-size: clamp(30px,8.3333vw,50px);
+    font-weight: 600;
+    color: var(--mainColor);
+}
+
+.login__form {
+    width: 94%;
+    max-width: 600px;
+    padding: clamp(15px,5.0000vw,30px);
+    border: 1px solid var(--mainGray);
+    border-radius: clamp(15px,5.0000vw,30px);
+
+    & .success-button {
+        margin: 0 auto;
+    }
+}
+
+.login__write {
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
