@@ -6,7 +6,7 @@ export const depths = [
             {
                 id: "00",
                 twoDepth: "사원 목록",
-                path: "/employees/list",
+                path: "/employees/list?page=1",
             },
         ],
     },
