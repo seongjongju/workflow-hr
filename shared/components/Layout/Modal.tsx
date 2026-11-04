@@ -4,11 +4,16 @@ import React, { ReactNode } from 'react';
 interface ModalProps {
     empoloyCreate: ReactNode;
     modalHide: React.MouseEventHandler<HTMLButtonElement>;
+    maxWidth: string;
 }
 
-const Modal = ({ empoloyCreate, modalHide }: ModalProps) => {
+const Modal = ({ 
+    empoloyCreate, 
+    modalHide,
+    maxWidth,
+}: ModalProps) => {
     return (
-        <div id='com-modal'>
+        <div id='com-modal' style={{maxWidth: maxWidth}}>
             <button 
                 className='com-modal__close'
                 onClick={modalHide}

@@ -73,13 +73,28 @@ color: var(--mainBlack); text-align: center; padding: .5em; background: #fff; bo
 .dim {position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background: #000; opacity: .5; z-index: 100;}
 
 #com-modal {position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: clamp(20px,3.0000vw,30px);
-width: 94%; max-width: 1000px; background: #fff; border-radius: clamp(20px,3.0000vw,30px); z-index: 100;} 
+width: 94%; background: #fff; border-radius: clamp(20px,3.0000vw,30px); z-index: 100; height: 80dvh;} 
 
 .com-modal__close {position: absolute; top: 15px; right: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 15px; height: 15px; cursor: pointer;
 
   & span {display: block; width: 100%; height: 2px; background: var(--mainBlack); border-radius: 2px; position: relative;}
   & span:first-child {transform: rotate(45deg);}
   & span:last-child {transform: rotate(-45deg); top: -2px;}
+}
+
+.modal-form {height: 100%; padding-bottom: 50px;
+
+  & .success-button {position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%);}
+}
+
+.modal-form__inner {display: flex; flex-direction: column; gap: 20px; height: 100%; overflow: auto;}
+
+.modal-form__write-x2 {display: flex; gap: 10px; width: 100%;
+  & .modal-form__write {width: 50%;}
+}
+
+.modal-form__write-x3 {display: flex; gap: 10px; width: 100%;
+  & .modal-form__write {width: 33.3%;}
 }
 
 /************************************ UI */
@@ -100,10 +115,21 @@ width: 94%; max-width: 1000px; background: #fff; border-radius: clamp(20px,3.000
 
 /*** input... ***/
 .label {font-size: clamp(13px,0.8333vw,16px); color: var(--mainBlack); line-height: 1.4; letter-spacing: -.6px; margin-bottom: .5em; white-space: nowrap;
-display: block; font-weight: 500;}
+display: block; font-weight: 500;
+
+  & span {color: #ee0000;}
+}
 
 /* type=text */
 .text-input {display: block; width: 100%; height: 3.44em; font-size: clamp(13px,0.8333vw,16px); color: var(--mainBlack); border: 1px solid var(--mainGray);
+padding: 0 1.25em; border-radius: .63em; outline-color: var(--mainColor);}
+
+/* type=date */
+.date-input {display: block; width: 12.5em; font-size: clamp(13px,0.8333vw,16px); height: 3.44em; color: var(--mainBlack); border: 1px solid var(--mainGray);
+padding: 0 1.25em; border-radius: .63em; outline-color: var(--mainColor);}
+
+/* select */
+.select {display: block; width: 100%; height: 3.44em; font-size: clamp(13px,0.8333vw,16px); color: var(--mainBlack); border: 1px solid var(--mainGray);
 padding: 0 1.25em; border-radius: .63em; outline-color: var(--mainColor);}
 
 /*** button ***/

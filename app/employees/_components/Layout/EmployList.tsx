@@ -144,6 +144,7 @@ const EmployList = () => {
                                     
                                 />
                             }
+                            maxWidth='600px'
                         />
                     </>
                 )
