@@ -22,13 +22,14 @@ const LoginForm = () => {
             <div className='login__write'>
                 <Label 
                     text="아이디"
+                    required={true}
                 />
                 <Input 
-                    classname="text-input"
                     placeholder='사원번호를 입력하세요'
                     type="text"
                     autocomplete="on"
                     name="id"
+                    required={true}
                 />
                 {state.errors?.id?.map((error, index) => (
                     <p className="error" key={index}>
@@ -39,13 +40,14 @@ const LoginForm = () => {
             <div className='login__write'>
                 <Label 
                     text="패스워드"
+                    required={true}
                 />
                 <Input 
-                    classname="text-input"
                     placeholder='패스워드를 입력하세요'
                     type="password"
                     autocomplete="current-password"
                     name="password"
+                    required={true}
                 />
                 {state.errors?.password?.map((error, index) => (
                     <p className="error" key={index}>

@@ -31,7 +31,7 @@ const Gnb = () => {
                             <button 
                                 className={`
                                     one-depth ${dep.id === id || 
-                                        dep.twoDepths.find(twoDep => twoDep.path === pathname) ?
+                                        dep.twoDepths.find(twoDep => twoDep.path.includes(pathname)) ?
                                     "is-active" : ""}
                                 `}
                                 type='button'
@@ -46,7 +46,7 @@ const Gnb = () => {
                             <ul 
                                 className={`
                                     gnb__list ${dep.id === id || 
-                                        dep.twoDepths.find(twoDep => twoDep.path === pathname) ?
+                                        dep.twoDepths.find(twoDep => twoDep.path.includes(pathname)) ?
                                     "is-active" : ""}
                                 `}
                             >
@@ -59,7 +59,7 @@ const Gnb = () => {
                                             >
                                                 <Link 
                                                     href={twoDep.path} 
-                                                    className={`two-depth ${twoDep.path === pathname ? 
+                                                    className={`two-depth ${twoDep.path.includes(pathname) ? 
                                                         "is-active" : ""}
                                                     `}
                                                 >
