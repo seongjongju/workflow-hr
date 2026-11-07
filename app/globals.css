@@ -67,8 +67,6 @@ color: var(--mainBlack); text-align: center; padding: .5em; background: #fff; bo
   &:last-child {border-right: none;}
 }
 
-.com-table tbody tr {cursor: pointer;}
-
 /*** modal ***/
 .dim {position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; background: #000; opacity: .5; z-index: 100;}
 
@@ -121,12 +119,13 @@ display: block; font-weight: 500;
 }
 
 /* type=text */
-.text-input {display: block; width: 100%; height: 3.44em; font-size: clamp(13px,0.8333vw,16px); color: var(--mainBlack); border: 1px solid var(--mainGray);
-padding: 0 1.25em; border-radius: .63em; outline-color: var(--mainColor);}
+.text-input {display: block; width: 100%; height: 3.44em; font-size: clamp(13px,0.8333vw,16px); color: var(--mainBlack); border: 1px solid var(--mainGray); padding: 0 1.25em; border-radius: .63em; outline-color: var(--mainColor);
+
+  &:read-only {background: #f5f5f5; color: #666; cursor: auto; pointer-events: none;}
+}
 
 /* type=date */
-.date-input {display: block; width: 12.5em; font-size: clamp(13px,0.8333vw,16px); height: 3.44em; color: var(--mainBlack); border: 1px solid var(--mainGray);
-padding: 0 1.25em; border-radius: .63em; outline-color: var(--mainColor);}
+.date-input {display: block; width: 12.5em; font-size: clamp(13px,0.8333vw,16px); height: 3.44em; color: var(--mainBlack); border: 1px solid var(--mainGray); padding: 0 1.25em; border-radius: .63em; outline-color: var(--mainColor);}
 
 /* select */
 .select {display: block; width: 100%; height: 3.44em; font-size: clamp(13px,0.8333vw,16px); color: var(--mainBlack); border: 1px solid var(--mainGray);
@@ -139,7 +138,11 @@ padding: 0 1.25em; border-radius: .63em; outline-color: var(--mainColor);}
   &.is-loading {cursor: auto; pointer-events: none; background-color: var(--mainGray);}
 }
 
+/* create */
 .create-button {font-size: clamp(13px,0.8333vw,16px); color: #fff; width: 5em; height: 2.78em; border-radius: .56em; background-color: var(--mainColor); cursor: pointer; text-align: center; display: block; margin-bottom: 1em; margin-left: auto;}
+
+/* more */
+.more-view {font-size: 14px; padding:.3em 1em; background-color: var(--mainColor); border-radius: .5em; cursor: pointer; color: #fff;}
 
 /*** error ***/
 .error {color: #ee0000; font-size: 14px; line-height: 1.4; letter-spacing: -.6px; margin-top: 5px;}

@@ -6,7 +6,8 @@ const Input = ({
     type, 
     autocomplete, 
     name, 
-    required
+    required,
+    readonly
 }: InputType) => {
     return (
         <input 
@@ -16,6 +17,7 @@ const Input = ({
             type={type}
             placeholder={placeholder}
             required={required}
+            readOnly={readonly}
         />
     );
 };

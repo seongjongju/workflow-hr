@@ -4,6 +4,7 @@ export type InputType = {
     autocomplete: string;
     name: string;
     required: boolean;
+    readonly?: boolean;
 };
 
 export type LabelType = {
@@ -15,4 +16,5 @@ export type LabelType = {
 export type ButtonType = {
     text: string;
     isLoading?: string;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
